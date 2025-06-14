@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: auth-system
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5331/filesDB
+    username: admin
+    password: 123
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml
+  sql:
+    init:
+      mode: always
+jwt:
+  public:
+    key-location: classpath:/app.pub
+  private:
+    key-location: classpath:/app.key
+
+
