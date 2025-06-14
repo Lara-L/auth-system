@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - '5331:5432'
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=filesDB
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:
